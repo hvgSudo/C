@@ -1,2 +1,2 @@
 # C
-All the codes written in C Language
+This Repository contains all the codes in C Programming Language written by me.
