@@ -6,7 +6,7 @@ struct node {
     struct node *next;
 };
 
-void push(struct node **, int);
+void insert(struct node **, int);
 void print(struct node *); 
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
     for (i = 0; i < n; i++) {
         printf("\nEnter data %d: ", i + 1);
         scanf("%d", &d);
-        push(&head, d);
+        insert(&head, d);
     }
     printf("\nElements entered into the list");
     printf("\nThe list is: ");
@@ -25,7 +25,7 @@ int main() {
     return 0;
 }
 
-void push(struct node **head_ref, int data) {
+void insert(struct node **head_ref, int data) {
     struct node *new = (struct node*)malloc(sizeof(struct node));
     new->data = data;
     new->next = (*head_ref);
