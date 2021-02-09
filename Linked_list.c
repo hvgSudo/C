@@ -7,6 +7,8 @@ struct node {
 };
 
 void insert(struct node **, int);
+void insert_after(struct node*, int);
+void append(struct node**, int);
 void print(struct node *); 
 
 int main() {
@@ -17,7 +19,10 @@ int main() {
     for (i = 0; i < n; i++) {
         printf("\nEnter data %d: ", i + 1);
         scanf("%d", &d);
-        insert(&head, d);
+        if (i == 0)
+            insert(&head, d);
+        else if (i != 0)
+            append(&head, d);
     }
     printf("\nElements entered into the list");
     printf("\nThe list is: ");
@@ -30,6 +35,32 @@ void insert(struct node **head_ref, int data) {
     new->data = data;
     new->next = (*head_ref);
     (*head_ref) = new;
+}
+
+void insert_after(struct node *prev, int new_data) {
+    if (prev == NULL) {
+        printf("Previous node cannot be null");
+        return;
+    }
+    struct node *ins = (struct node*)malloc(sizeof(struct node));
+    ins->data = new_data;
+    ins->next = prev;
+    prev->next = ins;
+}
+
+void append(struct node **head, int new_data) {
+    struct node *app = (struct node*)malloc(sizeof(struct node));
+    struct node *last = *head;
+    app->data = new_data;
+    app->next = NULL;
+    if (*head == NULL) {
+        *head = app;
+        return;
+    }
+    while (last->next != NULL)
+        last = last->next;
+    last->next = app;
+    return;
 }
 
 void print(struct node *read) {
