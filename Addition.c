@@ -7,4 +7,4 @@ int main()
 	c=a+b;
 	printf("Addition = %d\n",c);
 	return 0;
-}
+} 
