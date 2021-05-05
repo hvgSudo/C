@@ -1,8 +1,33 @@
 #include<stdio.h>
-main()
+#include<stdlib.h>
+
+void initCode() {
+	// fast_io;
+	#ifndef ONLINE_JUDGE
+  
+    // For getting input from input.txt file
+    freopen("D:\\Codes\\C\\input.txt", "r", stdin);
+  
+    // Printing the Output to output.txt file
+    freopen("D:\\Codes\\C\\output.txt", "w", stdout);
+  
+	#endif
+}
+
+int main()
 {
+	#ifndef ONLINE_JUDGE
+  
+    // For getting input from input.txt file
+    freopen("D:\\Codes\\C\\input.txt", "r", stdin);
+  
+    // Printing the Output to output.txt file
+    freopen("D:\\Codes\\C\\output.txt", "w", stdout);
+  
+	#endif
+	// initCode();
 	int i,j,a[5],b=0;
-	printf("\nEnter the elements - ");
+	// printf("\nEnter the elements - ");
 	for(i=0;i<5;i++)
 	{
 		scanf("%d",&a[i]);
@@ -35,4 +60,5 @@ main()
 		}
 		printf("\t%d",a[i]);
 	}
+	return 0;
 }
