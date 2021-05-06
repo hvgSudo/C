@@ -31,7 +31,7 @@ void DFS(struct Graph* graph, int vertex) {
 	struct Node* temp = List;
 
 	graph->visited[vertex] = 1;
-	printf("Visited %d \n", vertex);
+	printf("%d ", vertex);
 
 	while (temp) {
 		int connectedVertex = temp->vertex;
