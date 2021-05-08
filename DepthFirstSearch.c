@@ -3,16 +3,14 @@
 
 void initCode() {
 	#ifndef A
-  
-    // For getting input from input.txt file
-    freopen("D:/Codes/C/input.txt", "r", stdin);
+ 	// For getting input from input.txt file
+    freopen("D:/Codes/C/inputC.txt", "r", stdin);
   
     // Printing the Output to output.txt file
-    freopen("D:/Codes/C/output.txt", "w", stdout);
+    freopen("D:/Codes/C/outputC.txt", "w", stdout);
   
 	#endif
 }
-
 struct Node {
 	int vertex;
 	struct Node* next;
@@ -80,10 +78,10 @@ void addEdge(struct Graph* graph, int source, int destination) {
 
 // Print the graph
 void printGraph(struct Graph* graph) {
-	int v;
-	for (v = 0; v < graph->numberOfVertices; ++v) {
-		struct Node* temp = graph->adjacencyLists[v];
-		printf("\nVertex %d: ", v);
+	int i;
+	for (i = 0; i < graph->numberOfVertices; ++i) {
+		struct Node* temp = graph->adjacencyLists[i];
+		printf("\nVertex %d: ", i);
 		while (temp) {
 			printf("%d -> ", temp->vertex);
 			temp = temp->next;
@@ -91,6 +89,8 @@ void printGraph(struct Graph* graph) {
 		printf("\n");
 	}
 }
+
+
  
 int main() {
 	initCode();

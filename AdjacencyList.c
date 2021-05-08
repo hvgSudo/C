@@ -3,13 +3,13 @@
 
 // Code to take input from a file and write output to a file
 void initCode() {
-	#ifndef ONLINE_JUDGE
+	#ifndef adjacencyList
   
     // For getting input from input.txt file
-    freopen("D:/Codes/C/input.txt", "r", stdin);
+    freopen("D:/Codes/C/inputC.txt", "r", stdin);
   
     // Printing the Output to output.txt file
-    freopen("D:/Codes/C/output.txt", "w", stdout);
+    freopen("D:/Codes/C/outputC.txt", "w", stdout);
   
 	#endif
 }

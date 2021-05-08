@@ -29,7 +29,7 @@ struct Graph {
  }; 
 
  // Breadth First Search Recursive Algorithm
- void bfs(struct Graph* graph, int startVertex) {
+ void BFS(struct Graph* graph, int startVertex) {
  	struct Queue* q = createQueue();
  	graph->visited[startVertex] = 1;
  	enqueue(q, startVertex);
@@ -146,10 +146,10 @@ struct Graph {
  void initCode() {
  	#ifndef BreadthFirstSearch
  		// For getting input from input.txt file
-	    freopen("D:/Codes/C/input.txt", "r", stdin);
+	    freopen("D:/Codes/C/inputC.txt", "r", stdin);
 	  
 	    // Printing the Output to output.txt file
-	    freopen("D:/Codes/C/output.txt", "w", stdout);
+	    freopen("D:/Codes/C/outputC.txt", "w", stdout);
  	#endif
  }
 
@@ -165,7 +165,7 @@ struct Graph {
 	addEdge(graph, 2, 4);
 	addEdge(graph, 3, 4);
 
-  	bfs(graph, 0);
+  	BFS(graph, 0);
 
  	return 0;
  }
