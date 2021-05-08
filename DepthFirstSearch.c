@@ -105,7 +105,7 @@ int main() {
 	// initCode();
 	int exit = 0, stop;
 	int choice, vertices, vertex, s, d, i;
-	struct Graph* graph = createGraph(4);
+	struct Graph* graph;
 	while (exit != 1) {
 		stop = 0;
 		printMenu();
