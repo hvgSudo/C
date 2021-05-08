@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void initCode() {
+/*void initCode() {
 	#ifndef A
  	// For getting input from input.txt file
     freopen("D:/Codes/C/inputC.txt", "r", stdin);
@@ -10,7 +10,8 @@ void initCode() {
     freopen("D:/Codes/C/outputC.txt", "w", stdout);
   
 	#endif
-}
+}*/
+
 struct Node {
 	int vertex;
 	struct Node* next;
@@ -90,12 +91,73 @@ void printGraph(struct Graph* graph) {
 	}
 }
 
-
+void printMenu() {
+	printf("\n1. Create the graph");
+	printf("\n2. Insert into the graph"); 
+	printf("\n3. Print the graph");
+	printf("\n4. Depth First Search");
+	printf("\n5. Exit");
+	printf("\nEnter your choice: ");
+}
  
-int main() {
-	initCode();
+// Main method
+int main() { 
+	// initCode();
+	int exit = 0, stop;
+	int choice, vertices, vertex, s, d, i;
 	struct Graph* graph = createGraph(4);
-	addEdge(graph, 0, 1);
+	while (exit != 1) {
+		stop = 0;
+		printMenu();
+		scanf("%d", &choice);
+		// printf("%d", choice);
+		switch(choice) {
+			case 1:
+				printf("\nHow many vertices do you want in the graph: ");
+				scanf("%d", &vertices);
+				graph = createGraph(vertices);
+				while(1) {
+					printf("\nEnter -1 to stop");
+					printf("\nSource: ");
+					scanf("%d", &s);
+					if (s == -1)
+						break;
+					printf("Destination: ");
+					scanf("%d", &d);
+					addEdge(graph, s, d);
+				}
+				break;
+			case 2:
+				while(1) {
+					printf("\nEnter -1 to stop");
+					printf("\nSource: ");
+					scanf("%d", &s);
+					if (s == -1)
+						break;
+					printf("Destination: ");
+					scanf("%d", &d);
+					addEdge(graph, s, d);
+				}
+				break;
+			case 3:
+				printf("\nThe Adjacency List of the graph is ");
+				printGraph(graph);
+				break;
+			case 4:
+				printf("\nEnter the starting vertex: ");
+				scanf("%d", &vertex);
+				printf("Depth First Search is \n");
+				DFS(graph, vertex);
+				break;
+			case 5:
+				exit = 1;
+				break;
+			default:
+				printf("\nWrong choice");
+		}
+	}
+	
+	/*addEdge(graph, 0, 1);
 	addEdge(graph, 0, 2);
 	addEdge(graph, 1, 2);
 	addEdge(graph, 2, 3);
@@ -105,6 +167,6 @@ int main() {
 	printGraph(graph);
 
 	printf("\nDepth First search is\n");
-	DFS(graph, 1);
+	DFS(graph, 1);*/
 	return 0;
 }
