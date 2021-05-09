@@ -12,7 +12,7 @@
 }*/
 
 // initialize adjacency matrix
-void initializeMatrix(int graph[][vertices], int vertices) {
+void initializeMatrix(int graph[][MAX], int vertices) {
 	int i, j;
 	for (i = 0; i < vertices; ++i)
 		for (j = 0; j < vertices; ++j)
@@ -20,13 +20,13 @@ void initializeMatrix(int graph[][vertices], int vertices) {
 }
 
 // Add Edge
-void addEdge(int graph[][vertices], int source, int destination, int weight) {
+void addEdge(int graph[][MAX], int source, int destination, int weight) {
 	graph[source][destination] = weight;
 	graph[destination][source] = weight;
 }
 
 // Print graph
-void printGraph(int graph[][vertices], int vertices) {
+void printGraph(int graph[][MAX], int vertices) {
 	int i, j;
 	for (i = 0; i < vertices; ++i) {
 		printf("%d: ", i);
@@ -46,7 +46,7 @@ int minKey(int key[], bool mstSet[], int vertices) {
 }
 
 // Print MST 
-int printMST(int parent[], int graph[][vertices], int vertices) {
+int printMST(int parent[], int graph[][MAX], int vertices) {
 	printf("Edge \t Weight\n");
 	int i;
 	for (i = 1; i < vertices; ++i) 
@@ -54,7 +54,7 @@ int printMST(int parent[], int graph[][vertices], int vertices) {
 }
 
 // Construct and print MST
-void primMST(int graph[][vertices], int vertices) {
+void primMST(int graph[][MAX], int vertices) {
 	int parent[vertices];
 	int key[vertices];
 	bool mstSet[vertices];
@@ -71,7 +71,7 @@ void primMST(int graph[][vertices], int vertices) {
 		for(v = 0; v < vertices; ++v)
 			if (graph[u][v] && mstSet[v] == false && 
 				graph[u][v] < key[v])
-				parent[v] = u, key[v] = graph[u][vertex];
+				parent[v] = u, key[v] = graph[u][v];
 	}
 	printMST(parent, graph, vertices);
 }
@@ -128,7 +128,7 @@ int main() {
 				}
 				break;
 			case 3:
-				printf("\nThe Adjacency List of the graph is ");
+				printf("\nThe Adjacency Matrix of the graph is \n");
 				printGraph(graph, vertices);
 				break;
 			case 4:
