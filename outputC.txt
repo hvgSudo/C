@@ -9,15 +9,17 @@ Enter record: Adnan Shaikh, 19070124003
 
 Enter record: Achintya Singh Baghela, 19070124002
 
+INDEX table
+2: 128
+3: 96
+4: 64
+5: 32
+24: 0
+
 Testing search record functionality.
-
 Enter PRN: 19070124024
-Match has been found!
 Name: Harsh Vardhan Guleria, PRN: 19070124024
-
 Enter PRN: 19070124005
-Match has been found!
 Name: Ali Mazhar Luqmani, PRN: 19070124005
-
 Enter PRN: 19070124010
-Match not found!
+The record does not exist!

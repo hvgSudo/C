@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 #define PRN_COUNT 80
-const int RECORD_COUNT = 3;
-
+const int RECORD_COUNT = 5;
+ 
 const char *FILENAME = "students";
 
 const char *STUDENT_FORMAT_IN = " %[^,], %lli";   // Input is expected of the form (Name, PRN)
-const char *STUDENT_FORMAT_OUT = "Name: %s, PRN: %lli\n";
+const char *STUDENT_FORMAT_OUT = "\nName: %s, PRN: %lli\n";
 const char *FORMAT_OUT = "%s, %lli\n";
 
 // Array to store the position of records in the file
