@@ -102,42 +102,50 @@ void printMenu() {
  
 // Main method
 int main() { 
-	// initCode();
-	int exit = 0, stop;
+	//initCode();
+	int exit = 0;
 	int choice, vertices, vertex, s, d, i;
 	struct Graph* graph;
+	//printf("Working");
 	while (exit != 1) {
-		stop = 0;
 		printMenu();
 		scanf("%d", &choice);
-		// printf("%d", choice);
+		//printf("%d\n", choice);
 		switch(choice) {
 			case 1:
 				printf("\nHow many vertices do you want in the graph: ");
 				scanf("%d", &vertices);
+				//printf("%d", vertices);
 				graph = createGraph(vertices);
 				while(1) {
 					printf("\nEnter -1 to stop");
 					printf("\nSource: ");
 					scanf("%d", &s);
+					//printf("%d", s);
 					if (s == -1)
 						break;
-					printf("Destination: ");
+					printf("\nDestination: ");
 					scanf("%d", &d);
+					//printf("%d", d);
 					addEdge(graph, s, d);
 				}
+				//printf("\n");
 				break;
 			case 2:
 				while(1) {
+					graph->numberOfVertices = graph->numberOfVertices + 1;
 					printf("\nEnter -1 to stop");
 					printf("\nSource: ");
 					scanf("%d", &s);
+					//printf("%d", s);
 					if (s == -1)
 						break;
-					printf("Destination: ");
+					printf("\nDestination: ");
 					scanf("%d", &d);
+					//printf("%d", d);
 					addEdge(graph, s, d);
 				}
+				//printf("\n");
 				break;
 			case 3:
 				printf("\nThe Adjacency List of the graph is ");
@@ -146,7 +154,8 @@ int main() {
 			case 4:
 				printf("\nEnter the starting vertex: ");
 				scanf("%d", &vertex);
-				printf("Depth First Search is \n");
+				//printf("%d", vertex);
+				printf("\nDepth First Search is \n");
 				DFS(graph, vertex);
 				break;
 			case 5:
@@ -155,7 +164,7 @@ int main() {
 			default:
 				printf("\nWrong choice");
 		}
-	}
+	} 
 	
 	/*addEdge(graph, 0, 1);
 	addEdge(graph, 0, 2);

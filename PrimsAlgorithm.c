@@ -4,12 +4,12 @@
 #include<stdlib.h>
 #define MAX 10
 
-/*void initCode() {
+void initCode() {
 	#ifndef PrimsAlgorithm
 		freopen("D:/Codes/C/inputC.txt", "r", stdin);
 		freopen("D:/Codes/C/outputC.txt", "w", stdout);
 	#endif
-}*/
+}
 
 // initialize adjacency matrix
 void initializeMatrix(int graph[][MAX], int vertices) {
@@ -87,45 +87,54 @@ void printMenu() {
 
 // Main function
 int main() {
-	// initCode();
+	initCode();
 	int exit = 0;
 	int choice, vertices, vertex, s, d, i, weight;
 	int graph[MAX][MAX];
 	while (exit != 1) {
 		printMenu();
 		scanf("%d", &choice);
-		// printf("%d", choice);
+		printf("%d\n", choice);
 		switch(choice) {
 			case 1:
 				printf("\nHow many vertices do you want in the graph: ");
 				scanf("%d", &vertices);
+				printf("%d", vertices);
 				initializeMatrix(graph, vertices);
 				while(1) {
 					printf("\nEnter -1 to stop");
 					printf("\nSource: ");
 					scanf("%d", &s);
+					printf("%d", s);
 					if (s == -1)
 						break;
-					printf("Destination: ");
+					printf("\nDestination: ");
 					scanf("%d", &d);
-					printf("Weight: ");
+					printf("%d", d);
+					printf("\nWeight: ");
 					scanf("%d", &weight);
+					printf("%d", weight);
 					addEdge(graph, s, d, weight);
 				}
+				printf("\n");
 				break;
 			case 2:
 				while(1) {
 					printf("\nEnter -1 to stop");
 					printf("\nSource: ");
 					scanf("%d", &s);
+					printf("%d", s);
 					if (s == -1)
 						break;
-					printf("Destination: ");
+					printf("\nDestination: ");
 					scanf("%d", &d);
-					printf("Weight: ");
+					printf("%d", d);
+					printf("\nWeight: ");
 					scanf("%d", &weight);
+					printf("%d", weight);
 					addEdge(graph, s, d, weight);
 				}
+				printf("\n");
 				break;
 			case 3:
 				printf("\nThe Adjacency Matrix of the graph is \n");
