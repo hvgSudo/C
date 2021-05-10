@@ -34,8 +34,8 @@ void initIndex() {
 // Take and write input and output to a file
 void initCode() {
     #ifndef DIRECT
-    freopen("/mnt/d/codes/c/inputC.txt", "r", stdin);
-    freopen("/mnt/d/codes/c/outputC.txt", "w", stdout);
+    freopen("D:/Codes/C/inputC.txt", "r", stdin);
+    freopen("D:/Codes/C/outputC.txt", "w", stdout);
     #endif
 }
 
