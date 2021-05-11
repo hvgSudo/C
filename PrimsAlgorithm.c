@@ -6,8 +6,8 @@
 
 void initCode() {
 	#ifndef PrimsAlgorithm
-		freopen("D:/Codes/C/inputC.txt", "r", stdin);
-		freopen("D:/Codes/C/outputC.txt", "w", stdout);
+	freopen("inputC.txt", "r", stdin);
+	freopen("outputC.txt", "w", stdout);
 	#endif
 }
 

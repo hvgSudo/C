@@ -1,8 +1,20 @@
-Harsh Vardhan Guleria, 19070124024
-Ali Mazhar Luqmani, 19070124005
-Akashdeep Neogi, 19070124004
-Adnan Shaikh, 19070124003
-Achintya Singh Baghela, 19070124002 
-19070124024
-19070124005
-19070124010
+1
+5
+0 1 2
+0 3 6
+1 0 2
+1 2 3
+1 3 8
+1 4 5
+2 1 3
+2 4 7
+3 0 6
+3 1 8
+3 4 9
+4 1 5
+4 2 7
+4 3 9
+-1
+3
+4 1
+5

@@ -1,16 +1,16 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/*void initCode() {
+void initCode() {
 	#ifndef A
  	// For getting input from input.txt file
-    freopen("D:/Codes/C/inputC.txt", "r", stdin);
+    freopen("inputC.txt", "r", stdin);
   
     // Printing the Output to output.txt file
-    freopen("D:/Codes/C/outputC.txt", "w", stdout);
+    freopen("outputC.txt", "w", stdout);
   
 	#endif
-}*/
+}
 
 struct Node {
 	int vertex;
@@ -102,7 +102,7 @@ void printMenu() {
  
 // Main method
 int main() { 
-	//initCode();
+	initCode();
 	int exit = 0;
 	int choice, vertices, vertex, s, d, i;
 	struct Graph* graph;
@@ -110,26 +110,26 @@ int main() {
 	while (exit != 1) {
 		printMenu();
 		scanf("%d", &choice);
-		//printf("%d\n", choice);
+		printf("%d\n", choice);
 		switch(choice) {
 			case 1:
 				printf("\nHow many vertices do you want in the graph: ");
 				scanf("%d", &vertices);
-				//printf("%d", vertices);
+				printf("%d", vertices);
 				graph = createGraph(vertices);
 				while(1) {
 					printf("\nEnter -1 to stop");
 					printf("\nSource: ");
 					scanf("%d", &s);
-					//printf("%d", s);
+					printf("%d", s);
 					if (s == -1)
 						break;
 					printf("\nDestination: ");
 					scanf("%d", &d);
-					//printf("%d", d);
+					printf("%d", d);
 					addEdge(graph, s, d);
 				}
-				//printf("\n");
+				printf("\n");
 				break;
 			case 2:
 				while(1) {
@@ -137,15 +137,15 @@ int main() {
 					printf("\nEnter -1 to stop");
 					printf("\nSource: ");
 					scanf("%d", &s);
-					//printf("%d", s);
+					printf("%d", s);
 					if (s == -1)
 						break;
 					printf("\nDestination: ");
 					scanf("%d", &d);
-					//printf("%d", d);
+					printf("%d", d);
 					addEdge(graph, s, d);
 				}
-				//printf("\n");
+				printf("\n");
 				break;
 			case 3:
 				printf("\nThe Adjacency List of the graph is ");
@@ -154,7 +154,7 @@ int main() {
 			case 4:
 				printf("\nEnter the starting vertex: ");
 				scanf("%d", &vertex);
-				//printf("%d", vertex);
+				printf("%d", vertex);
 				printf("\nDepth First Search is \n");
 				DFS(graph, vertex);
 				break;
