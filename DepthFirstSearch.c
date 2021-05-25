@@ -12,7 +12,7 @@ void initCode() {
 	#endif
 }
 
-struct Node {
+struct Node{
 	int vertex;
 	struct Node* next;
 };

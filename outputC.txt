@@ -1,0 +1,58 @@
+
+1. Insert node
+2. Delete Node
+3. View the tree
+4. Exit
+Enter your choice: 1
+
+Enter -1 to stop
+Enter the key: 2
+
+Enter -1 to stop
+Enter the key: 1
+
+Enter -1 to stop
+Enter the key: 7
+
+Enter -1 to stop
+Enter the key: 4
+
+Enter -1 to stop
+Enter the key: 5
+
+Enter -1 to stop
+Enter the key: 3
+
+Enter -1 to stop
+Enter the key: 8
+
+Enter -1 to stop
+Enter the key: -1
+
+1. Insert node
+2. Delete Node
+3. View the tree
+4. Exit
+Enter your choice: 3
+
+The tree is 1 2 3 4 5 7 8 
+1. Insert node
+2. Delete Node
+3. View the tree
+4. Exit
+Enter your choice: 2
+
+Enter the key: 3
+
+1. Insert node
+2. Delete Node
+3. View the tree
+4. Exit
+Enter your choice: 3
+
+The tree is 1 2 4 5 7 8 
+1. Insert node
+2. Delete Node
+3. View the tree
+4. Exit
+Enter your choice: 4
