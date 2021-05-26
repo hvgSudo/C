@@ -58,20 +58,18 @@ void primMST(int graph[][MAX], int vertices) {
 	int parent[vertices];
 	int key[vertices];
 	bool mstSet[vertices];
-
-	int i, count, v;
-	for (i = 0; i < vertices; ++i)
+	for (int i = 0; i < vertices; ++i) 
 		key[i] = INT_MAX, mstSet[i] = false;
 	key[0] = 0;
 	parent[0] = -1;
-
-	for (count = 0; count < vertices - 1; ++count) {
-		int u = minKey(key, mstSet, vertices);
-		mstSet[u] = true;
-		for(v = 0; v < vertices; ++v)
-			if (graph[u][v] && mstSet[v] == false && 
-				graph[u][v] < key[v])
-				parent[v] = u, key[v] = graph[u][v];
+	for (int i = 0; i < vertices - 1; ++i) {
+		int selected = minKey(key, mstSet, vertices);
+		mstSet[selected] = true;
+		for (int j = 0; j < vertices; ++j) {
+			if (graph[selected][j] && mstSet[j] == false && 
+				graph[selected][j] < key[j])
+				parent[j] = selected, key[j] = graph[selected][j];
+		}
 	}
 	printMST(parent, graph, vertices);
 }
@@ -150,11 +148,11 @@ int main() {
 				printf("\nWrong choice");
 		}
 	}
-	/*int graph[V][V] = { { 0, 2, 0, 6, 0 },
+	/*int graph[MAX][MAX] = { { 0, 2, 0, 6, 0 },
                         { 2, 0, 3, 8, 5 },
                         { 0, 3, 0, 0, 7 },
                         { 6, 8, 0, 0, 9 },
                         { 0, 5, 7, 9, 0 } };
-    primMST(graph);*/
+    primMST(graph, MAX);*/
 	return 0;
 }

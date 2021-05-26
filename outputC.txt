@@ -1,58 +1,100 @@
 
-1. Insert node
-2. Delete Node
-3. View the tree
-4. Exit
+1. Create Graph
+2. Insert into the graph
+3. Print the graph
+4. Get minimum spanning tree using Prim's Algorithm
+5. Exit
 Enter your choice: 1
 
+How many vertices do you want in the graph: 5
 Enter -1 to stop
-Enter the key: 2
-
+Source: 0
+Destination: 1
+Weight: 2
 Enter -1 to stop
-Enter the key: 1
-
+Source: 0
+Destination: 3
+Weight: 6
 Enter -1 to stop
-Enter the key: 7
-
+Source: 1
+Destination: 0
+Weight: 2
 Enter -1 to stop
-Enter the key: 4
-
+Source: 1
+Destination: 2
+Weight: 3
 Enter -1 to stop
-Enter the key: 5
-
+Source: 1
+Destination: 3
+Weight: 8
 Enter -1 to stop
-Enter the key: 3
-
+Source: 1
+Destination: 4
+Weight: 5
 Enter -1 to stop
-Enter the key: 8
-
+Source: 2
+Destination: 1
+Weight: 3
 Enter -1 to stop
-Enter the key: -1
+Source: 2
+Destination: 4
+Weight: 7
+Enter -1 to stop
+Source: 3
+Destination: 0
+Weight: 6
+Enter -1 to stop
+Source: 3
+Destination: 1
+Weight: 8
+Enter -1 to stop
+Source: 3
+Destination: 4
+Weight: 9
+Enter -1 to stop
+Source: 4
+Destination: 1
+Weight: 5
+Enter -1 to stop
+Source: 4
+Destination: 2
+Weight: 7
+Enter -1 to stop
+Source: 4
+Destination: 3
+Weight: 9
+Enter -1 to stop
+Source: -1
 
-1. Insert node
-2. Delete Node
-3. View the tree
-4. Exit
+1. Create Graph
+2. Insert into the graph
+3. Print the graph
+4. Get minimum spanning tree using Prim's Algorithm
+5. Exit
 Enter your choice: 3
 
-The tree is 1 2 3 4 5 7 8 
-1. Insert node
-2. Delete Node
-3. View the tree
-4. Exit
-Enter your choice: 2
+The Adjacency Matrix of the graph is 
+0: 0 2 0 6 0 
+1: 2 0 3 8 5 
+2: 0 3 0 0 7 
+3: 6 8 0 0 9 
+4: 0 5 7 9 0 
 
-Enter the key: 3
-
-1. Insert node
-2. Delete Node
-3. View the tree
-4. Exit
-Enter your choice: 3
-
-The tree is 1 2 4 5 7 8 
-1. Insert node
-2. Delete Node
-3. View the tree
-4. Exit
+1. Create Graph
+2. Insert into the graph
+3. Print the graph
+4. Get minimum spanning tree using Prim's Algorithm
+5. Exit
 Enter your choice: 4
+Edge 	 Weight
+0 - 1 	 2 
+1 - 2 	 3 
+0 - 3 	 6 
+1 - 4 	 5 
+
+1. Create Graph
+2. Insert into the graph
+3. Print the graph
+4. Get minimum spanning tree using Prim's Algorithm
+5. Exit
+Enter your choice: 5
