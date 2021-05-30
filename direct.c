@@ -12,7 +12,7 @@ const char *FORMAT_OUT = "%s, %lli\n";
 
 // Array to store the position of records in the file
 int INDEX[PRN_COUNT];
-
+ 
 typedef struct {
     char name[20];
     long long int prn;
