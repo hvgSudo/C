@@ -23,7 +23,12 @@ void displayList(struct Node* head) {
 }
 
 void printMenu() {
-    printf("\n1. ");
+    printf("\n1. Create Linked list");
+    printf("\n2. Insert data into the list");
+    printf("\n3. View the linked list");
+    printf("\n4. Remove an element from the list");
+    printf("\n5. Exit");
+    printf("\nEnter your choice: ");
 }
 
 int insert(struct Node*, int);
@@ -32,4 +37,8 @@ int remove(struct Node*, int);
 int main() {
     struct Node* head;
     return 0;
+}
+
+int insert(struct Node* head, int data) {
+    
 }
